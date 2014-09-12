@@ -1,0 +1,22 @@
+$LOAD_PATH.unshift(File.expand_path("../../lib", __FILE__))
+
+require "intelli_fridge_server"
+require "logger"
+
+$log = Logger.new(STDOUT)
+$log.level = Logger::DEBUG
+
+fridge = IntelliFridgeServer::Fridge.new
+
+trap("SIGINT") { exit! }
+
+puts "IntelliFridge is running waiting barcode input..."
+
+
+
+loop do
+  barcode = gets.strip
+  next if barcode.empty?
+  puts "received: #{barcode}\n"
+  fridge.process_barcode barcode
+end

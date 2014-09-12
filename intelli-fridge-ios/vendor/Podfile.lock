@@ -1,0 +1,10 @@
+PODS:
+  - couchbase-lite-ios (1.0.0)
+
+DEPENDENCIES:
+  - couchbase-lite-ios (~> 1.0.0)
+
+SPEC CHECKSUMS:
+  couchbase-lite-ios: 8850648a4ea4ea0c96fd2c34305fe21c870929b4
+
+COCOAPODS: 0.33.1
